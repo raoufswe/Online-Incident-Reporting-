@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-4">
+        <h1>Add Building</h1>
+        <form action="/admin/categories/create" method="post">
+             <div class="form-group">
+                 <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter title" class="form-control">
+            </div>
+        <button class="btn btn-primary">Add Building</button>
+      </form>
+    </div>
+    <br>
+    <hr>
+    </div>
+
+     <br>
+
+    <div class="row">
+
+    <div class="col-sm-8">
+        <h1>Building</h1>
+        <table class="table">
+            <thead>
+                 <tr>
+                     <th>ID</th>
+                     <th>Name</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+                {{#each categories}} 
+                <tr>
+                     <td>{{id}}</td>
+                     <td>{{name}}</td>
+                     <td><a href="/admin/categories/edit/{{id}}" class="btn btn-info">Edit</a></td>
+                     <td>
+                         <form action="/admin/categories/{{id}}?_method=DELETE" method="post">
+
+                            <button class="btn btn-danger">Delete</button>
+                         
+                         </form>
+
+                     </td>
+                </tr>
+            </tbody> 
+                {{/each}}
+                
+        </table>
+    </div>

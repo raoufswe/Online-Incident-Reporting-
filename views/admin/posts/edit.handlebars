@@ -1,0 +1,118 @@
+<h1>Edit Incident</h1>
+
+<form action="/admin/posts/edit/{{post.id}}?_method=PUT" method="post" enctype="multipart/form-data" >
+    <div class="form-group">
+        <label for = "title">Title</label>
+        <input name="title" type="text" class="form-control" id="title" value="{{post.title}}">
+    </div>
+     <div class="form-group">
+        <label for = "file">File Upload</label>
+        <input type='file' name='file' class="form-control">
+    </div>
+    <div class="form-group">
+        <label for = "category">Building</label>
+        <select name="category" is="category" class="form-control">
+            {{#select post.category}}
+            {{#each categories}}
+            <option value="{{id}}">{{name}}</option> 
+            {{/each}}
+            {{/select}}
+            
+        </select>
+    </div>
+    <div class="form-group">
+        <label for = "status">Status</label>
+        <select name="status" is="status" class="form-control">
+            {{#select post.status}}
+            <option value="Open">Open</option> 
+            <option value="On Going">On Going</option> 
+            <option value="Closed">Closed</option> 
+            {{/select}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for = "floor">Floor</label>
+        <select name="floor" is="floor" class="form-control">
+            {{#select post.floor}}
+            <option value="F1">F1</option> 
+            <option value="F2">F2</option> 
+            <option value="F3">F3</option> 
+            <option value="F4">F4</option> 
+            {{/select}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for = "DirectCause">Direct Cause</label>
+        <select name="DirectCause" is="DirectCause" class="form-control">
+            {{#select post.DirectCause}}
+            <option value="Nature">Nature</option> 
+            <option value="Struck">Struck</option> 
+            <option value="Transportation">Transportation</option> 
+             <option value="Caught">Caught</option> 
+            <option value="Fall">Fall</option> 
+            <option value="Illness">Illness</option> 
+            {{/select}}
+        </select>
+    </div>
+
+     <div class="form-group">
+        
+        <label for = "SubDirectCause">Sub Direct Cause</label>
+        <select name="SubDirectCause" is="SubDirectCause" class="form-control">
+            {{#select post.SubDirectCause}}
+            <option value="Struck / Hit By">Struck / Hit By</option> 
+            <option value="Puch Through / Nip">Puch Through / Nip</option> 
+            <option value="Land Accident">Land Accident</option> 
+            <option value="Caught Between">Caught Between</option> 
+            <option value="Fall from Height">Fall from Height</option> 
+            <option value="Sudden Collapse">Sudden Collapse</option> 
+            {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        
+        <label for = "IncidentRating">Incident Rating</label>
+        <select name="IncidentRating" is="IncidentRating" class="form-control">
+            {{#select post.IncidentRating}}
+           <option value="R-1">R-1</option> 
+            <option value="R-2">R-2</option> 
+            <option value="R-3">R-3</option> 
+            <option value="R-4">R-4</option> 
+            <option value="R-5">R-5</option> 
+            {{/select}}
+        </select>
+    </div>
+
+     <div class="form-group">
+        
+        <label for = "IncidentType">Incident Type</label>
+        <select name="IncidentType" is="IncidentType" class="form-control">
+            {{#select post.IncidentType}}
+            <option value="Fire/Explosion">Fire/Explosion</option> 
+            <option value="First Aid Cases">First Aid Cases</option> 
+            <option value="Injury/Illness">Injury/Illness</option> 
+            <option value="Security Breach">Security Breach</option> 
+            <option value="Asset Damage or Loss">Asset Damage or Loss</option> 
+            {{/select}}
+        </select>
+    </div>
+
+     <div class="form-group">
+
+        <label for = "AssignedTo">Assigned To</label>
+        <input name="AssignedTo" type="text" class="form-control" id="AssignedTo" value="{{post.AssignedTo}}">
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for = "body">Body</label>
+        <textarea name="body" cols="30" rows="10" class="form-control" id="body">{{post.body}}</textarea>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+
+</form>

@@ -1,0 +1,39 @@
+<h1>My Incidents</h1>
+<div style="overflow-x:auto;">
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+           <th>Title</th>
+            <th>Status</th>
+            <th>Floor</th>
+            <th>Building</th>
+            <th>Assigned To</th>
+            <th>Date</th>
+            <th>View Post</th>
+            <th>Edit Post</th>
+            <th>Delete Post</th>
+
+        </tr>
+    </thead>
+    <tbody> 
+        {{#each posts}}
+
+        <tr> 
+            <td>{{title}}</td>
+            <td>{{status}}</td>
+            <td>{{floor}}</td>
+            <td>{{category.name}}</td>
+            <td>{{AssignedTo}}</td>
+            <td>{{generateDate date 'MMMM Do YYYY'}}</td>
+            <td><a href="/post/{{slug}}">View</a></td>
+            <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Edit</a></td>
+            <td><form action="/admin/posts/{{id}}?_method=DELETE" method="post">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </tr>
+        {{/each}}
+
+    </tbody>
+    </table>
+    </div>

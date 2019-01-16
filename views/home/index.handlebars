@@ -1,0 +1,368 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Incident Reporting</title>
+    
+    <link rel="stylesheet" href="homepage/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="homepage/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    
+    <link rel="stylesheet" href="homepage/css/styles.min.css">
+     
+    <style>
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 4em;    
+    text-transform: uppercase;
+    margin: 0;
+  
+    padding-bottom:0.3em; 
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    border-color: black;
+    background: #383838	;
+    outline: none;
+    margin: 20px auto;
+    z-index: auto
+}
+.btn.btn-hero:hover {
+  background: white;
+  color: black;
+}
+
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+    background-image: url("https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  
+}
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+.box {
+
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+            padding-bottom: 1em;
+}
+a { color: inherit; } 
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  padding: 30px 0;
+}
+
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
+  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+#contact p {
+    color: black;
+}
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input, #contact .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+#contact .form button[type="submit"] {
+  background: #fd6b0d;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+      </style>
+
+</head>
+
+    
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+        <div class="hero">
+        <hgroup>
+            <h1>Online Incident Reporting </h1>        
+            <h3 style="padding-bottom: 1em;">A fully hosted system for the management of the incident reporting process.</h3>
+        </hgroup>
+       <a  href="/register"class="btn btn-hero btn-lg .bg-dark" >Get started now</a>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+
+   
+   
+    <div id="home">
+        <div class="container">
+    <div id="features" class="features-clean" style="padding-bottom:3px;">
+        
+            <div class="intro">
+                <h2 class="text-center" style="padding:80px auto 0;padding-top:70px;margin-bottom:20px;">Features</h2>
+
+            </div>
+            <div class="row features">
+                <div class=" box col-sm-6 col-lg-4 item"><i class="icon ion-ios-speedometer-outline icon" style="font-size:50px;margin-top:-15px;"></i>
+                    <h3 class="name" style="margin-bottom:15px;">Incident Management System</h3>
+                    <p class="description"> Report all incidents within your workplace or building through a simple form</p>
+                </div>
+                
+                <div class="box col-sm-6 col-lg-4 item"><i class="icon ion-ios-bookmarks-outline icon" style="font-size:50px;margin-top:-15px;"></i>
+                    <h3 class="name" style="margin-top:0;margin-bottom:15px;"> Desktop and Mobile layout </h3>
+                    <p class="description"> Allow users to use the system through Desktop or Mobile with a user-friendly interface</p>
+                </div>
+
+                <div class="box col-sm-6 col-lg-4 item"><i class="icon ion-ios-analytics-outline icon" style="font-size:50px;margin-top:-15px;margin-right:0px;"></i>
+                    <h3 class="name" style="margin-bottom:15px;">Analitics Data</h3>
+                    <p class="description">Analyze your data using easy to understand chart to perform evaluation</p>
+                </div>
+
+            </div>
+    </div>
+    </div>
+    </div>
+
+
+    
+    <div id="contact" class="features-clean" style="padding-bottom:40px;">
+        
+           <div class="container">
+                <h2 class="text-center" style="padding:50px auto 0;padding-top:.3em ;margin-bottom:10px;">Contact Us</h2>
+                <p>Do you have a question about the system? Would you like to deploy the system in your organization for free? you'll find the answers that you want quickly. We look forward to receiving your message!</p>
+                <div class="form" >
+          
+          <div id="errormessage"></div>
+          <form action="send" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center "><button class="bg-dark" type="submit">Send Message</button></div>
+          </form>
+        </div>
+            
+        </div>
+       
+    </div>
+
+
+<footer class="p-3 mb-2 bg-dark sticky-footer">
+ 
+        <div class="text-center">
+          <a  href="https://www.linkedin.com/in/abdurraouf-fathi-aa3a81131/" class="btn btn-social-icon btn-linkedin bg-light">
+             <span class="fa fa-linkedin" ></span> 
+         </a>
+         <a href="https://github.com/raoufswe" class="btn btn-social-icon btn-github bg-light  ">
+             <span class="fa fa-github"></span>
+         </a>
+        </div>
+     
+    </footer>
+
+
+
+<script src="homepage/js/jquery.min.js"></script>
+    <script src="homepage/bootstrap/js/bootstrap.min.js"></script>
+    <script src="homepage/js/script.min.js"></script>
+
+<script>
+
+jQuery(document).ready(function($) {
+  "use strict";
+
+  //Contact
+  $('form.contactForm').submit(function() {
+    var f = $(this).find('.form-group'),
+      ferror = false,
+      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+
+    f.children('input').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'email':
+            if (!emailExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'checked':
+            if (! i.is(':checked')) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'regexp':
+            exp = new RegExp(exp);
+            if (!exp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    f.children('textarea').each(function() { // run all inputs
+
+      var i = $(this); // current input
+      var rule = i.attr('data-rule');
+
+      if (rule !== undefined) {
+        var ierror = false; // error flag for current input
+        var pos = rule.indexOf(':', 0);
+        if (pos >= 0) {
+          var exp = rule.substr(pos + 1, rule.length);
+          rule = rule.substr(0, pos);
+        } else {
+          rule = rule.substr(pos + 1, rule.length);
+        }
+
+        switch (rule) {
+          case 'required':
+            if (i.val() === '') {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'minlen':
+            if (i.val().length < parseInt(exp)) {
+              ferror = ierror = true;
+            }
+            break;
+        }
+        i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+      }
+    });
+    if (ferror) return false;
+    else var str = $(this).serialize();
+ 
+  });
+
+});
+
+
+</script>

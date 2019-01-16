@@ -1,0 +1,15 @@
+<h1>Edit Building</h1>
+
+<div class="row">
+    
+<div class="col-sm-4">
+        
+        <form action="/admin/categories/edit/{{category.id}}?_method=PUT" method="post">
+             <div class="form-group">
+                 <label for="name">Name</label>
+                <input value="{{category.name}}" type="text" name="name" placeholder="Enter title" class="form-control">
+            </div>
+        <button class="btn btn-primary">Upadte Building</button>
+      </form>
+    </div>
+    </div>

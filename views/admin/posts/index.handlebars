@@ -1,0 +1,30 @@
+<h1>All Incidents</h1>
+<div style="overflow-x:auto;">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Floor</th>
+            <th>Building</th>
+            <th>Assigned To</th>
+            <th>Date</th>
+            <th>View Post</th>
+           
+        </tr>
+    </thead>
+    <tbody> 
+        {{#each posts}}
+        <tr> 
+            <td>{{title}}</td>
+            <td>{{status}}</td>
+            <td>{{floor}}</td>
+            <td>{{category.name}}</td>
+            <td>{{AssignedTo}}</td>
+            <td>{{generateDate date 'MMMM Do YYYY'}}</td>
+            <td><a href="/post/{{slug}}">View</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    </div>
